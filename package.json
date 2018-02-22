@@ -4,11 +4,14 @@
   "description": "Should webpack allow applications to direclty depend on its transitive dependencies?  Right now the build system is doing nothing to prevent this from happening - I think maybe it should!",
   "main": "index.js",
   "scripts": {
-    "start": "webpack index.js out.js && node out.js"
+    "start": "npm run webpack && node webpack.js",
+    "webpack": "webpack index.js webpack.js",
+    "rollup": "rollup index.js --o rollup.js --f cjs"
   },
   "author": "@samouri",
-  "license": "MIT",
+  "license": "none",
   "devDependencies": {
+    "rollup": "^0.56.2",
     "webpack": "^3.11.0"
   }
 }

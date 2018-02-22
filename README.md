@@ -4,7 +4,7 @@ Shouldn webpack forbid applications from directly depending on its transitive de
 
 
 
-Notice that while there is only one declared dependency of this repo, [webpack](https://github.com/webpack/webpack), the bundled code is still able to reference and utilize [ajv](https://github.com/epoberezkin/ajv).
+Notice that while there are only two declared dependency of this repo, [webpack](https://github.com/webpack/webpack) and [rollup](https://github.com/rollup/rollup), the bundled code is still able to reference and utilize [ajv](https://github.com/epoberezkin/ajv).
 
 
 
@@ -18,4 +18,8 @@ For example, in this repo I could imagine an error message like this being usefu
 ERROR in ./index.js
 Module not found: Error: Can't use transitive dependency 'ajv' in 'webpack-transitive-deps-question'.
 ```
+
+
+
+I wanted to see how other js compilers handle the same issue, and it turns out `rollup` does what I would expect: 
 
