@@ -19,7 +19,9 @@ ERROR in ./index.js
 Module not found: Error: Can't use transitive dependency 'ajv' in 'webpack-transitive-deps-question'.
 ```
 
+Instead what happened was:
+![webpack-example](https://cldup.com/YqloI48cqE.png)
 
 
 I wanted to see how other js compilers handle the same issue, and it turns out `rollup` does what I would expect: 
-
+![rollup-example](https://cldup.com/KNhcb4TejJ.png)
