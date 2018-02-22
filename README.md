@@ -1,10 +1,18 @@
 # webpack-transitive-deps-question
 
-Shouldn webpack forbid applications from directly depending on its transitive dependencies? This repo serves as a minimal example of how allowing usage of transitive dependencies can be confusing and accidentally allow for bad patterns to linger within a codebase.
+Shouldn webpack forbid applications from directly depending on its transitive dependencies? This repo serves as a minimal example of how allowing usage of transitive dependencies can be confusing and accidentally allow for bad patterns to linger within a codebase.  This repo allows easy comparison of how webpack and rollup differ on how to handle this:
+
+### usage instructions
+
+```
+npm install
+npm run webpack
+npm run rollup
+```
 
 
 
-Notice that while there are only two declared dependency of this repo, [webpack](https://github.com/webpack/webpack) and [rollup](https://github.com/rollup/rollup), the bundled code is still able to reference and utilize [ajv](https://github.com/epoberezkin/ajv).
+Notice that while there are only two declared dependency of this repo, [webpack](https://github.com/webpack/webpack) and [rollup](https://github.com/rollup/rollup), the webpack bundled code is still able to reference and utilize [ajv](https://github.com/epoberezkin/ajv).
 
 
 
@@ -19,9 +27,12 @@ ERROR in ./index.js
 Module not found: Error: Can't use transitive dependency 'ajv' in 'webpack-transitive-deps-question'.
 ```
 
-Instead what happened was:
+### screenshots
+
+**webpack**
+
 ![webpack-example](https://cldup.com/YqloI48cqE.png)
 
 
-I wanted to see how other js compilers handle the same issue, and it turns out `rollup` does something closer to what I would expect (warns at build and blows up at runtime): 
-![rollup-example](https://cldup.com/KNhcb4TejJ.png)
+
+**rollup**![rollup-example](https://cldup.com/KNhcb4TejJ.png)
