@@ -6,12 +6,15 @@
   "scripts": {
     "start": "npm run webpack && node webpack.js",
     "webpack": "webpack index.js webpack.js",
-    "rollup": "rollup index.js --o rollup.js --f cjs"
+    "rollup": "rollup -c"
   },
   "author": "@samouri",
   "license": "none",
   "devDependencies": {
     "rollup": "^0.56.2",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.3",
     "webpack": "^3.11.0"
   }
 }

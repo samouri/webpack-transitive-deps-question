@@ -1,13 +1,13 @@
 # webpack-transitive-deps-question
 
-Shouldn webpack forbid applications from directly depending on its transitive dependencies? This repo serves as a minimal example of how allowing usage of transitive dependencies can be confusing and accidentally allow for bad patterns to linger within a codebase.  This repo allows easy comparison of how webpack and rollup differ on how to handle this:
+Shouldn webpack forbid applications from directly depending on its transitive dependencies? This repo serves as a minimal example of how allowing usage of transitive dependencies can be confusing and accidentally allow for bad patterns to linger within a codebase.  This repo makes it easy to show how webpack handles this situation:
 
 ### usage instructions
 
 ```
 npm install
 npm run webpack
-npm run rollup
+npm run rollup  # included just as an experiment. it behaves the same way as webpack
 ```
 
 
@@ -35,4 +35,4 @@ Module not found: Error: Can't use transitive dependency 'ajv' in 'webpack-trans
 
 
 
-**rollup**![rollup-example](https://cldup.com/KNhcb4TejJ.png)
+**rollup**![rollup-example](https://cldup.com/sTnLox9Qmc.png)
