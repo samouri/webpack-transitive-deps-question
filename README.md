@@ -23,5 +23,5 @@ Instead what happened was:
 ![webpack-example](https://cldup.com/YqloI48cqE.png)
 
 
-I wanted to see how other js compilers handle the same issue, and it turns out `rollup` does what I would expect: 
+I wanted to see how other js compilers handle the same issue, and it turns out `rollup` does something closer to what I would expect (warns at build and blows up at runtime): 
 ![rollup-example](https://cldup.com/KNhcb4TejJ.png)
